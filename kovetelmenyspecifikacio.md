@@ -12,21 +12,21 @@ Egy olyan webes felület, ahol könnyedén követhető egy hallgató előrehalad
 - Ha a rendszer automatikusan kreditszámot számol a teljesített tárgyak alapján, fontos azoknak az előírásoknak a betartása, amelyeket az egyetem vagy oktatási intézmény alkalmaz a kreditszámításra.    
 
 ### **4.  Jelenlegi üzleti folyamatok modellje:**
-4.1. Elérhető egyetemi tárgyak megtekintése
-    4.1.1. Bejelentkezés a Neptun rendszerbe.
-    4.1.2. "Tárgyak"-->"Tárgyfelvétel" opció kiválasztása
-    4.1.3 Az aktuális félév kiválasztása
-    4.1.4 Tárgyak listázása
-        4.1.4.1. A kivánt tárgy kiválasztása
-        4.1.4.2. A követelmények megtekintése
-4.2. Kreditszám megtekintése(aktuális félév)
-    4.2.1. Bejelentkezés a Neptun rendszerbe.
-    4.2.2. "Tárgyak"-->"Felvett tárgyak" opció kiválasztása
-    4.2.3. Az aktuális félév kiválasztása
-    4.2.4. Tárgyak listázása 
-4.3. Összes teljesített kreditszám megtekintése
-    4.3.1. Bejelentkezés a Neptun rendszerbe.
-    4.3.2 "Tanulmányok" --> "Tanulmányi átlagok" opció kiválasztása
+- 4.1. Elérhető egyetemi tárgyak megtekintése
+    - 4.1.1. Bejelentkezés a Neptun rendszerbe.
+    - 4.1.2. "Tárgyak"-->"Tárgyfelvétel" opció kiválasztása
+    - 4.1.3 Az aktuális félév kiválasztása
+    - 4.1.4 Tárgyak listázása
+        - 4.1.4.1. A kivánt tárgy kiválasztása
+        - 4.1.4.2. A követelmények megtekintése
+- 4.2. Kreditszám megtekintése(aktuális félév)
+    - 4.2.1. Bejelentkezés a Neptun rendszerbe.
+    - 4.2.2. "Tárgyak"-->"Felvett tárgyak" opció kiválasztása
+    - 4.2.3. Az aktuális félév kiválasztása
+    - 4.2.4. Tárgyak listázása 
+- 4.3. Összes teljesített kreditszám megtekintése
+    - 4.3.1. Bejelentkezés a Neptun rendszerbe.
+    - 4.3.2 "Tanulmányok" --> "Tanulmányi átlagok" opció kiválasztása
     
 ### **5.  Igényelt üzleti folyamatok modellje:**
     

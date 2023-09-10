@@ -30,7 +30,6 @@ Egy olyan webes felület, ahol **könnyedén, átláthatóan és egy helyen** k�
 ### **5.  Igényelt üzleti folyamatok modellje:**
     
 ### **6.  Követelménylista:**
-- A felhasználók képesek új tárgyakat hozzáadni, módosítani és törölni.
 - Minden tárgyhoz tartozik egy név, kreditszám, ajánlott félév és egyedi azonosító.
 - A rendszer megjeleníti a hallgatók számára a rendelkezésre álló tárgyakat, beleértve a felvehető, teljesített és hátralévő tárgyakat.
 - A rendszer automatikusan számolja ki a teljesített kreditszámot a kiválasztott tárgyak alapján.

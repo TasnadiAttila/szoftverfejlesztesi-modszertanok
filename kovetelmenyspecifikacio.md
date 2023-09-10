@@ -33,7 +33,9 @@ Egy olyan webes felület, ahol **könnyedén, átláthatóan és egy helyen** k�
 - Minden tárgyhoz tartozik egy név, kreditszám, ajánlott félév és egyedi azonosító.
 - A rendszer megjeleníti a hallgatók számára a rendelkezésre álló tárgyakat, beleértve a felvehető, teljesített és hátralévő tárgyakat.
 - A rendszer automatikusan számolja ki a teljesített kreditszámot a kiválasztott tárgyak alapján.
-- A weboldalnak reszponzívnek kell lennie, hogy a felhasználók különböző eszközökön (számítógép, tablet, mobil) is használhassák.   
+- A weboldalnak reszponzívnak kell lennie, hogy a felhasználók különböző eszközökön (számítógép, tablet, mobil) is használhassák.
+- A rendszer vegye figyelembe a tantárgykövetelményeket, tehát ne lehessen teljesítettnek jelölni egy tárgyat amelynek előfeltétele még nem teljesült.
+  
 ### **7. Irányított és szabad szöveges riportok szövege:**
     
 ### **8. Fogalomszótár:**

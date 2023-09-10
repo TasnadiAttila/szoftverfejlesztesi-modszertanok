@@ -4,7 +4,7 @@
 Az egyetem jelenleg egy Neptun nevű webes platformot használ az egyetemi tárgyak nyilvántartására és azokkal kapcsolatos információk megjelenítésére. A Neptun felületen találhatóak a tárgyak nevei, kreditszáma, ajánlott féléve, valamint további részletes információk, például a tárgyfelvételének a követelményei. A rendszer biztosítja a kreditszámok nyomon követését is. Itt láthatod, hány kreditpontot szereztél már, illetve láthatod a felvett tantárgyakhoz kapcsolódó kreditpontokat is. Tehát itt szemléltethető, hogy mely tantárgyak mennyi kreditpontot érnek.
 
 ### **2.  Vágyálom rendszer leírása:**
-Egy olyan webes felület, ahol **könnyedén, átláthatóan és egy helyen** követhető egy hallgató előrehaladása. Lenne egy táblázatszerű ábra, ami színekkel, jól értelmezhető módon jelöli a felvehető, teljesített és hátralévő tárgyakat. A tárgyak "kártyáin" látható továbbá a tárgy neve, a teljesítéséért járó kreditszám és az ajánlott félév. Az oldalon látható az eddig teljesített tárgyak alapján kiszámolt kreditszám is. Mindezt valamilyen módon tárolja hallgatóként. Rendszergazdaként lehessen látni az összes hallgató előrehaldását (az adott hallgató kiválasztása után). Valamint renszergazdagént bejelentkezve lehessen hallgatót regisztrálni. Továbbá a weboldal legyen reszponzív és kellemes a szemnek.
+Egy olyan webes felület, ahol **könnyedén, átláthatóan és egy helyen** követhető egy hallgató előrehaladása PTI BSc szakon. A tantárgyak ajánlott félév szerint táblázat oszlopaiba legyenek rendezve. Amelyben a cellák színezettek, aszerint, hogy az adott tárgy teljesített, felvehető vagy lezárt. Az egymástól függő tárgyakat nyilak kötik össze. Az oldalon látható az eddig teljesített tárgyak alapján kiszámolt kreditszám is. Az előrehaladás állapotát valamilyen módon tárolja el. Az alkalmazás újbóli megnyitása után a felület ugyan úgy néz ki, mint amikor bezárult. Továbbá a weboldal legyen reszponzív és kellemes a szemnek.
 
 ### **3.  A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok   és ajánlások felsorolása:**
 - HTML5 és CSS3: A legújabb webes technológiák használata, hogy a weboldal reszponzív és modern kinézetű legyen.
@@ -39,3 +39,4 @@ Egy olyan webes felület, ahol **könnyedén, átláthatóan és egy helyen** k�
 ### **7. Irányított és szabad szöveges riportok szövege:**
     
 ### **8. Fogalomszótár:**
+- lezárt - A tárgy nem felvehető, mert nem teljesültek az előfeltételek.

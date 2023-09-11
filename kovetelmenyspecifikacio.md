@@ -28,6 +28,13 @@ Egy olyan webes felület, ahol **könnyedén, átláthatóan és egy helyen** k�
     - 4.3.2 "Tanulmányok" --> "Tanulmányi átlagok" opció kiválasztása
     
 ### **5.  Igényelt üzleti folyamatok modellje:**
+- 5.1. Elérhető egyetemi tárgyak megtekintése
+    - 5.1.1. Weblap megynitása.
+    - 5.1.2. Rögtön a tárgytáblázat fogad, oldalra lapozható, ha nem fér ki a kijelzőre a keresett félév.
+    - 5.1.3 Az oszlopok individuálisan görgethetőek, ha szükséges.
+- 5.2. Kreditszám megtekintése
+    - 5.2.1. Weblap megynitása.
+    - 5.2.2. Az oldal alján látaható eddigi/összes alakban
     
 ### **6.  Követelménylista:**
 - Minden tárgyhoz tartozik egy név, kreditszám, ajánlott félév és egyedi azonosító.

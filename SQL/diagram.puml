@@ -1,0 +1,36 @@
+@startuml
+!define ENTITY entity
+!define PRIMARY_KEY pk
+!define FOREIGN_KEY fk
+
+' Define entities
+ENTITY "Teljesített Tárgy" as TeljesitettTargy {
+  + Neptun_Kód CHAR(6) : PRIMARY_KEY
+  + Kurzus_ID TINYINT : PRIMARY_KEY
+}
+
+ENTITY Kurzus {
+  + Kurzus_ID TINYINT UNSIGNED : PRIMARY_KEY
+  + Név VARCHAR(100)
+  + Állapot VARCHAR(10) null
+  + Kredit TINYINT
+}
+
+ENTITY Előfeltétel {
+  + Kurzus_ID TINYINT UNSIGNED : PRIMARY_KEY
+  + Előfeltétel_ID TINYINT
+}
+
+ENTITY Hallgató {
+  + Neptun_kód CHAR(6) : PRIMARY_KEY
+  + Név VARCHAR(60)
+  + Félév TINYINT
+  + Jelszó_HASH CHAR(64)
+}
+
+' Define relationships
+TeljesitettTargy }o-- Kurzus : Kurzus_ID
+Előfeltétel }o-- Kurzus : Előfeltétel_ID
+Előfeltétel }o-- Kurzus : Kurzus_ID
+TeljesitettTargy }o-- Hallgató : Neptun_Kód
+@enduml

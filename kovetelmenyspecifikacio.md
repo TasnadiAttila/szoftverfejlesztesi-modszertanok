@@ -4,7 +4,7 @@
 Az egyetem jelenleg egy Neptun nevű webes platformot használ az egyetemi tárgyak nyilvántartására és azokkal kapcsolatos információk megjelenítésére. A Neptun felületen találhatóak a tárgyak nevei, kreditszáma, ajánlott féléve, valamint további részletes információk, például a tárgyfelvételének a követelményei. A rendszer biztosítja a kreditszámok nyomon követését is. Itt láthatod, hány kreditpontot szereztél már, illetve láthatod a felvett tantárgyakhoz kapcsolódó kreditpontokat is. Tehát itt szemléltethető, hogy mely tantárgyak mennyi kreditpontot érnek.
 
 ### **2.  Vágyálom rendszer leírása:**
-Egy olyan webes felület, ahol **könnyedén, átláthatóan és egy helyen** követhető egy hallgató előrehaladása PTI BSc szakon kötelező tantárgyak szempontjából. A tantárgyak ajánlott félév szerint táblázat oszlopaiba legyenek rendezve. Amelyben a cellák színezettek, aszerint, hogy az adott tárgy teljesített, felvehető vagy lezárt. Az egymástól függő tárgyakat nyilak kötik össze. Az oldalon látható az eddig teljesített tárgyak alapján kiszámolt kreditszám is. Az előrehaladás állapotát valamilyen módon tárolja el. Az alkalmazás újbóli megnyitása után a felület ugyan úgy néz ki, mint amikor bezárult. Továbbá a weboldal legyen reszponzív és kellemes a szemnek.
+Egy olyan webes felület, ahol egy hallgató bejelentkezés után könnyedén és egy helyen láthatja az előrehaladáshoz köthető információkat az egyetemi tanulmányi kapcsán PTI BSc szakon. Csak a kötelező kurzusok jellenek meg táblázatos formában. Minden oszlop egy félév. Az oszlopok **nem** közvetlen vannak egymás mellet. A tárgyak közti előfeltételi kapcsolatokat nyilak jelzik az oszlopok között. Egy cella tartalma: kurzus neve, teljesítéséért járó kreditszám. Minden tárgy azon félév oszlopába kerül, amelyik félévben ajánlott teljesíteni az adott tárgyat. A cellák szinezettek, az alapján, hogy a bejelentkezett hallgató teljesített-e már a tárgyat, a tárgy le van-e zárva, amiért nem teljesítette az előfeltételt. A hallgató aktuális félévéhez tartozó oszlop ki van emelve. Az oldalon jól látható helyen fel van tüntetve a szerzett kreditszám *Szerzett/Összes* alakban. A weboldal reszponzív és kellemes a szemnek.
 
 ### **3.  A rendszerre vonatkozó pályázat, törvények, rendeletek, szabványok   és ajánlások felsorolása:**
 - HTML5 és CSS3: A legújabb webes technológiák használata, hogy a weboldal reszponzív és modern kinézetű legyen.
@@ -29,12 +29,12 @@ Egy olyan webes felület, ahol **könnyedén, átláthatóan és egy helyen** k�
     
 ### **5.  Igényelt üzleti folyamatok modellje:**
 - 5.1. Elérhető egyetemi tárgyak megtekintése
-    - 5.1.1. Weblap megynitása.
-    - 5.1.2. Rögtön a tárgytáblázat fogad, oldalra lapozható, ha nem fér ki a kijelzőre a keresett félév.
+    - 5.1.1. Bejelentkezés a rendszerbe.
+    - 5.1.2. A tárgytáblázat fogad, oldalra lapozható, ha nem fér ki a kijelzőre a keresett félév.
     - 5.1.3 Az oszlopok individuálisan görgethetőek, ha szükséges.
 - 5.2. Kreditszám megtekintése
-    - 5.2.1. Weblap megynitása.
-    - 5.2.2. Az oldal alján látaható eddigi/összes alakban
+    - 5.2.1. Bejelentkezés a rendszerbe.
+    - 5.2.2. Az oldal alján látaható szerzett/összes alakban
     
 ### **6.  Követelménylista:**
 - Minden tárgyhoz tartozik egy név, kreditszám, ajánlott félév és egyedi azonosító.

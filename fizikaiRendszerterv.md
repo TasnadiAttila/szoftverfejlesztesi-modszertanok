@@ -37,22 +37,22 @@
 		- **Főoldal:** A hallgatók itt láthatják a kötelező kurzusokat tartalmazó táblázatot. Az aktuális félév ki van emelve, és a kurzusok színezettek az előrehaladás alapján.
 		-   **Bejelentkezés:** A hallgatók bejelentkezhetnek a rendszerbe, hogy hozzáférjenek az adataikhoz és az előrehaladási információkhoz.
 
-- #### 2. Üzleti logika:
-	Az üzleti logika felelős a felhasználói kérelmek feldolgozásáért és az adatok kezeléséért. Itt találhatók azok a komponensek és szolgáltatások, amelyek segítenek a felhasználói igények kielégítésében.
-		-   **Felhasználókezelés:** Ezen a területen a felhasználók bejelentkezése és hitelesítése történik. A bejelentkezett felhasználó adatait kezelik itt.
-		-   **Adatbázis-kezelés:** A kurzusok, hallgatók és előrehaladási adatokat tároló adatbázist itt kezelik. Az adatbázis lehet relációs vagy NoSQL típusú, ahol a kurzusokhoz, hallgatókhoz és kurzusfelvételekhez kapcsolódó táblák vagy dokumentumok találhatók.
-		-   **Kurzusok kezelése:** Ez a komponens felelős a kurzusok adatainak karbantartásáért, beleértve a kurzusok létrehozását, módosítását és törlését.
-		-   **Kurzusfelvételek kezelése:** Itt dolgozzák fel a kurzusok felvételét és teljesítését, valamint az előfeltételek ellenőrzését.
-- #### 3. Adatbázis:
-Az adatbázis tárolja az összes szükséges adatot a rendszer működéséhez, beleértve a kurzusokat, hallgatókat, kurzusfelvételeket és előrehaladási adatokat.
-- #### 4. Webes szerver:
-A webes szerver felelős a kliens böngészőkből érkező HTTP kérések fogadásáért és válaszok küldéséért. A kérések feldolgozását az üzleti logika végzi, és a válaszokat a felhasználói interfésznek küldi.
-- #### 5. Adatmegjelenítés:
-Az adatok megjelenítése a felhasználói interfészen keresztül történik. A táblázatok és az előrehaladási információk vizualizálása, valamint a színezés és a kiemelés itt valósul meg.
-- #### 6. Felhasználói autentikáció és hitelesítés:
-Ez a komponens felelős a felhasználók bejelentkezésének kezeléséért, valamint az őket megfelelő jogosultságokkal ellátott területekhez való hozzáférés biztosításáért.
-- #### 7. Adatbiztonság:
-Az adatbiztonság komponens gondoskodik a felhasználói adatok védelméről és az adatb
+	- #### 2. Üzleti logika:
+		Az üzleti logika felelős a felhasználói kérelmek feldolgozásáért és az adatok kezeléséért. Itt találhatók azok a komponensek és szolgáltatások, amelyek segítenek a felhasználói igények kielégítésében.
+			-   **Felhasználókezelés:** Ezen a területen a felhasználók bejelentkezése és hitelesítése történik. A bejelentkezett felhasználó adatait kezelik itt.
+			-   **Adatbázis-kezelés:** A kurzusok, hallgatók és előrehaladási adatokat tároló adatbázist itt kezelik. Az adatbázis lehet relációs vagy NoSQL típusú, ahol a kurzusokhoz, hallgatókhoz és kurzusfelvételekhez kapcsolódó táblák vagy dokumentumok találhatók.
+			-   **Kurzusok kezelése:** Ez a komponens felelős a kurzusok adatainak karbantartásáért, beleértve a kurzusok létrehozását, módosítását és törlését.
+			-   **Kurzusfelvételek kezelése:** Itt dolgozzák fel a kurzusok felvételét és teljesítését, valamint az előfeltételek ellenőrzését.
+	- #### 3. Adatbázis:
+	Az adatbázis tárolja az összes szükséges adatot a rendszer működéséhez, beleértve a kurzusokat, hallgatókat, kurzusfelvételeket és előrehaladási adatokat.
+	- #### 4. Webes szerver:
+	A webes szerver felelős a kliens böngészőkből érkező HTTP kérések fogadásáért és válaszok küldéséért. A kérések feldolgozását az üzleti logika végzi, és a válaszokat a felhasználói interfésznek küldi.
+	- #### 5. Adatmegjelenítés:
+	Az adatok megjelenítése a felhasználói interfészen keresztül történik. A táblázatok és az előrehaladási információk vizualizálása, valamint a színezés és a kiemelés itt valósul meg.
+	- #### 6. Felhasználói autentikáció és hitelesítés:
+	Ez a komponens felelős a felhasználók bejelentkezésének kezeléséért, valamint az őket megfelelő jogosultságokkal ellátott területekhez való hozzáférés biztosításáért.
+	- #### 7. Adatbiztonság:
+	Az adatbiztonság komponens gondoskodik a felhasználói adatok védelméről és az adatb
 - ### **Az alkalmazás rétegei:**
     Különválaszthatók a modell, a nézet és a vezérlő rétegek.
 - ### **Adatspecifikációk/objektumspecifikációk (környezetfüggő adattervek):**

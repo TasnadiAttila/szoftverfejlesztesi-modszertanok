@@ -35,6 +35,39 @@
 - ### **Az alkalmazás rétegei:**
     Különválaszthatók a modell, a nézet és a vezérlő rétegek.
 - ### **Adatspecifikációk/objektumspecifikációk (környezetfüggő adattervek):**
+	- #### 1. Adatspecifikációk
+		- Felhasználói adatok:
+			- Felhasználónév: A felhasználó bejelentkezési neve. 
+			- Jelszó: A felhasználó bejelentkezési jelszava.
+		- Tanulmányi adatok:
+			- Kurzus: Az egyetemi kurzus neve.
+			-  Kreditszám: A kurzus elvégzéséért járó kreditszám.
+			-  Előfeltétel: Azok a kurzusok, amelyeket a tanulóknak előzetesen teljesíteniük kell a kurzus felvételéhez.
+			- Félév: A kurzushoz tartozó ajánlott félév, amikor a tanulóknak érdemes elvégezni a kurzust.
+		- Tanulmányi előrehaladás
+			- Hallgató: Az egyetemi hallgatók adatai, beleértve a nevet, azonosítót és befejezett kurzusok listáját.
+			- Kurzusfelvétel: Rögzíti, hogy egy hallgató felvett-e egy kurzust, és ha igen, akkor mely félévben.
+	- #### 2. Objektumspecifikációk
+		- Felhasználó (User)
+			-   Attribútumok:
+			    -   Felhasználónév (Username)
+			    -   Jelszó (Password)
+			- Kurzus (Course)
+				-   Attribútumok:
+				    -   Kurzus neve (Course Name)
+				    -   Kreditszám (Credits)
+				    -   Előfeltételek (Prerequisites): Lista a kurzus előfeltételeiről
+				    -   Ajánlott félév (Recommended Semester)
+			- Hallgató (Student)
+				-   Attribútumok:
+				    -   Azonosító (ID)
+				    -   Név (Name)
+				    -   Felvett kurzusok (Enrolled Courses): A kurzusok listája, amelyeket a hallgató felvett a megfelelő félévben.
+			- Metódusok:
+			    -   `felvetKurzust(kurzus)`: A kurzus felvétele a hallgató kurzuslistájába a megfelelő félévben.
+			    -   `teljesítKurzust(kurzus)`: A kurzus teljesítésének rögzítése a hallgató kurzuslistájában.
+			    -   `megjelenitElotereltek(kurzus)`: Megjeleníti, hogy a kurzus előfeltételei teljesültek-e.
+
 - ### **Programspecifikációk:**
 - #####  1. Bevezetés
     A PTI BSc Tanulmányi Követési Webes Felület egy olyan alkalmazás, amely lehetővé teszi a PTI egyetemi hallgatók számára, hogy könnyedén és egy helyen kövessék tanulmányaik előrehaladását.

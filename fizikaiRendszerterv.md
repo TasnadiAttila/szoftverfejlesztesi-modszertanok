@@ -38,7 +38,8 @@
 - ### **Programspecifikációk:**
     #### Programspecifikáció: PTI BSc Tanulmányi Követési Webes Felület
     #####  1. Bevezetés
-    A PTI BSc Tanulmányi Követési Webes Felület egy olyan alkalmazás, amely lehetővé teszi a PTI egyetemi hallgatók számára, hogy könnyedén és egy helyen kövessék tanulmányaik előrehaladását. Az alkalmazás csak a kötelező kurzusokat tartalmazza táblázatos formában, lehetővé teszi az előfeltételi        kapcsolatok megjelenítését nyilak segítségével, és vizuálisan is ábrázolja a hallgatók teljesítményét.
+    A PTI BSc Tanulmányi Követési Webes Felület egy olyan alkalmazás, amely lehetővé teszi a PTI egyetemi hallgatók számára, hogy könnyedén és egy helyen kövessék tanulmányaik előrehaladását.
+    Az alkalmazás csak a kötelező kurzusokat tartalmazza táblázatos formában, lehetővé teszi az előfeltételi kapcsolatok megjelenítését nyilak segítségével, és vizuálisan is ábrázolja a hallgatók teljesítményét.
     ##### 2. Felhasználói funkciók
         2.1. Bejelentkezés
             A hallgatók bejelentkezhetnek a rendszerbe felhasználónév és jelszó megadásával.
@@ -67,7 +68,8 @@
             Az alkalmazás adatbázist használ a felhasználói adatok és kurzusinformációk tárolására.
     ##### 4. Fejlesztői megjegyzések
         4.1. Szoftverarchitektúra
-            Az alkalmazás MVC (Model-View-Controller) architektúrára épül, ahol a modellek a kurzusok és a felhasználók, a nézet a webes felület, a vezérlők pedig az alkalmazás logikáját kezelik.
+            Az alkalmazás MVC (Model-View-Controller) architektúrára épül, ahol a modellek a kurzusok és a felhasználók,
+            a nézet a webes felület, a vezérlők pedig az alkalmazás logikáját kezelik.
         4.2. Fejlesztési nyelv és keretrendszer
             Az alkalmazás HTML,CSS,JavaScript nyelven készül MySQL keretrendszer felhasználásával.
     

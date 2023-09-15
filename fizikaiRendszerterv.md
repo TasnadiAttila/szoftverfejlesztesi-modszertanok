@@ -41,8 +41,8 @@
 			- Jelszó: A felhasználó bejelentkezési jelszava.
 		- Tanulmányi adatok:
 			- Kurzus: Az egyetemi kurzus neve.
-			-  Kreditszám: A kurzus elvégzéséért járó kreditszám.
-			-  Előfeltétel: Azok a kurzusok, amelyeket a tanulóknak előzetesen teljesíteniük kell a kurzus felvételéhez.
+			- Kreditszám: A kurzus elvégzéséért járó kreditszám.
+			- Előfeltétel: Azok a kurzusok, amelyeket a tanulóknak előzetesen teljesíteniük kell a kurzus felvételéhez.
 			- Félév: A kurzushoz tartozó ajánlott félév, amikor a tanulóknak érdemes elvégezni a kurzust.
 		- Tanulmányi előrehaladás
 			- Hallgató: Az egyetemi hallgatók adatai, beleértve a nevet, azonosítót és befejezett kurzusok listáját.
@@ -50,24 +50,23 @@
 	- #### 2. Objektumspecifikációk
 		- Felhasználó (User)
 			-   Attribútumok:
-			    -   Felhasználónév (Username)
-			    -   Jelszó (Password)
-			- Kurzus (Course)
+			    -   Felhasználónév
+			    -   Jelszó
+			- Kurzus
 				-   Attribútumok:
-				    -   Kurzus neve (Course Name)
-				    -   Kreditszám (Credits)
-				    -   Előfeltételek (Prerequisites): Lista a kurzus előfeltételeiről
-				    -   Ajánlott félév (Recommended Semester)
-			- Hallgató (Student)
+				    -   Kurzus neve
+				    -   Kreditszám
+				    -   Előfeltételek: Lista a kurzus előfeltételeiről
+				    -   Ajánlott félév
+			- Hallgató
 				-   Attribútumok:
-				    -   Azonosító (ID)
-				    -   Név (Name)
-				    -   Felvett kurzusok (Enrolled Courses): A kurzusok listája, amelyeket a hallgató felvett a megfelelő félévben.
+				    -   Azonosító
+				    -   Név
+				    -   Felvett kurzusok: A kurzusok listája, amelyeket a hallgató felvett a megfelelő félévben.
 			- Metódusok:
-			    -   `felvetKurzust(kurzus)`: A kurzus felvétele a hallgató kurzuslistájába a megfelelő félévben.
-			    -   `teljesítKurzust(kurzus)`: A kurzus teljesítésének rögzítése a hallgató kurzuslistájában.
-			    -   `megjelenitElotereltek(kurzus)`: Megjeleníti, hogy a kurzus előfeltételei teljesültek-e.
-
+			    -   `kurzusFel(kurzus)`: A kurzus felvétele a hallgató kurzuslistájába a megfelelő félévben.
+			    -   `teljesítettKurzus(kurzus)`: A kurzus teljesítésének rögzítése a hallgató kurzuslistájában.
+			    -   `megjelenitElofeltetelek(kurzus)`: Megjeleníti, hogy a kurzus előfeltételei teljesültek-e.
 - ### **Programspecifikációk:**
 - #####  1. Bevezetés
     A PTI BSc Tanulmányi Követési Webes Felület egy olyan alkalmazás, amely lehetővé teszi a PTI egyetemi hallgatók számára, hogy könnyedén és egy helyen kövessék tanulmányaik előrehaladását.

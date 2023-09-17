@@ -27,8 +27,8 @@
         - ***Előfeltétel_ID** tinyint*: Az előfeltétel kuruz azonosítója
      
 				@startuml
-			      	entity "Hallgató" as h {
-				 * neptun kód : char(6) <<PK>>
+				entity "Hallgató" as h {
+				* neptun kód : char(6) <<PK>>
 				 --
 				 nev : varchar(60)
 				 felev : tinyint
@@ -119,7 +119,7 @@
 		    -   `teljesítettKurzus(kurzus)`: A kurzus teljesítésének rögzítése a hallgató kurzuslistájában.
 		    -   `megjelenitElofeltetelek(kurzus)`: Megjeleníti, hogy a kurzus előfeltételei teljesültek-e.
   
-				       @startuml
+				  	@startuml
 					class User {
 					  - Neptun Kód
 					  - Jelszó

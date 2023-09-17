@@ -26,7 +26,7 @@
         - ***Kurzus_ID** tinyint*: A kurzus azonosítója amelyhez előfeltételként szolgál
         - ***Előfeltétel_ID** tinyint*: Az előfeltétel kuruz azonosítója
      
-			        @startuml
+				@startuml
 			      	entity "Hallgató" as h {
 				 * neptun kód : char(6) <<PK>>
 				 --

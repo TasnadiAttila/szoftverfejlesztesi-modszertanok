@@ -26,7 +26,7 @@
         - ***Kurzus_ID** tinyint*: A kurzus azonosítója amelyhez előfeltételként szolgál
         - ***Előfeltétel_ID** tinyint*: Az előfeltétel kuruz azonosítója
      
-      > @startuml
+     	> @startuml
 	entity "Hallgató" as h {
 	 * neptun kód : char(6) <<PK>>
 	 --
@@ -34,26 +34,20 @@
 	 felev : tinyint
 	 jelszo_hash : char(60)
 	}
-	
 	entity "Teljesített Tárgy" as tt {
 	 * neptunk kód : char(6) <<FK>>
 	 * kurzus_id : tinyint <<PK>>
 	}
-	
 	entity "Kurzus" as k {
 	 * kurzus_ID : tinyint <<PK>>
 	 nev : varchar(100)
 	 allapot : varchar(10)
 	 kredit : tinyint
 	}
-	
-	
 	entity "Előfeltétel" as e {
 	 * kurzus_id : tinyint <<PK>>
 	 * elofeltetel_id : tinyint <<FK>>
 	}
-	
-	
 	h --{ tt : nptun kód
 	tt }-- k : kurzus_id
 	k --{ e : kurzus_id

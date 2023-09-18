@@ -135,11 +135,9 @@
 					  - Név
 					  - Felvett kurzusok: List<Kurzus>
 					}
-					User --|> Kurzus : <<has-a>>
-					Hallgató --|> User : <<has-a>>
 					@enduml
 
-![kép](https://github.com/TasnadiAttila/szoftverfejlesztesi-modszertanok/assets/70896019/427ed3c4-69d1-44eb-b08d-759371438332)
+![image](https://github.com/TasnadiAttila/szoftverfejlesztesi-modszertanok/assets/70896019/15692d82-12e7-4f1d-9e6e-4eabd2043181)
 
 - ### **Programspecifikációk:**
 - #####  1. Bevezetés

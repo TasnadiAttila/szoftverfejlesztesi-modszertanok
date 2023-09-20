@@ -1,6 +1,6 @@
 -- Create the Tárgy table
 CREATE TABLE Tárgy (
-  Tárgy_Kód CHAR(12) PRIMARY KEY,
+  Tárgy_Kód CHAR(16) PRIMARY KEY,
   Név VARCHAR(100),
   Kredit TINYINT UNSIGNED,
   Ajánlott_Félév TINYINT UNSIGNED
@@ -8,8 +8,8 @@ CREATE TABLE Tárgy (
 
 -- Create the Előfeltétel table
 CREATE TABLE Előfeltétel (
-  Tárgy_Kód CHAR(12),
-  Előfeltétel_ID CHAR(12),
+  Tárgy_Kód CHAR(16),
+  Előfeltétel_ID CHAR(16),
   PRIMARY KEY (Tárgy_Kód, Előfeltétel_ID)
 );
 
@@ -24,7 +24,7 @@ CREATE TABLE Hallgató (
 -- Create the Teljesített_Tárgy table
 CREATE TABLE Teljesített_Tárgy (
   Neptun_Kód CHAR(6),
-  Tárgy_Kód CHAR(12),
+  Tárgy_Kód CHAR(16),
   PRIMARY KEY (Neptun_Kód, Tárgy_Kód)
 );
 

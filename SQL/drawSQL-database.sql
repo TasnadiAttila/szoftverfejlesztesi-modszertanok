@@ -1,6 +1,6 @@
--- Create the Kurzus table
-CREATE TABLE Kurzus (
-  Kurzus_ID TINYINT(5) UNSIGNED PRIMARY KEY,
+-- Create the Tárgy table
+CREATE TABLE Tárgy (
+  Tárgy_Kód CHAR(12) PRIMARY KEY,
   Név VARCHAR(100),
   Kredit TINYINT UNSIGNED,
   Ajánlott_Félév TINYINT UNSIGNED
@@ -8,9 +8,9 @@ CREATE TABLE Kurzus (
 
 -- Create the Előfeltétel table
 CREATE TABLE Előfeltétel (
-  Kurzus_ID TINYINT(5) UNSIGNED,
-  Előfeltétel_ID TINYINT(5) UNSIGNED,
-  PRIMARY KEY (Kurzus_ID, Előfeltétel_ID)
+  Tárgy_Kód CHAR(12),
+  Előfeltétel_ID CHAR(12),
+  PRIMARY KEY (Tárgy_Kód, Előfeltétel_ID)
 );
 
 -- Create the Hallgató table
@@ -24,8 +24,8 @@ CREATE TABLE Hallgató (
 -- Create the Teljesített_Tárgy table
 CREATE TABLE Teljesített_Tárgy (
   Neptun_Kód CHAR(6),
-  Kurzus_ID TINYINT(5) UNSIGNED,
-  PRIMARY KEY (Neptun_Kód, Kurzus_ID)
+  Tárgy_Kód CHAR(12),
+  PRIMARY KEY (Neptun_Kód, Tárgy_Kód)
 );
 
 -- Define foreign keys using ALTER TABLE
@@ -35,16 +35,16 @@ ALTER TABLE Teljesített_Tárgy
   REFERENCES Hallgató(Neptun_kód);
 
 ALTER TABLE Teljesített_Tárgy
-  ADD CONSTRAINT FK_TeljesitettTargy_Kurzus
-  FOREIGN KEY (Kurzus_ID)
-  REFERENCES Kurzus(Kurzus_ID);
+  ADD CONSTRAINT FK_TeljesitettTargy_Tárgy
+  FOREIGN KEY (Tárgy_Kód)
+  REFERENCES Tárgy(Tárgy_Kód);
 
 ALTER TABLE Előfeltétel
-  ADD CONSTRAINT FK_Előfeltétel_Kurzus_ID
-  FOREIGN KEY (Kurzus_ID)
-  REFERENCES Kurzus(Kurzus_ID);
+  ADD CONSTRAINT FK_Előfeltétel_Tárgy_Kód
+  FOREIGN KEY (Tárgy_Kód)
+  REFERENCES Tárgy(Tárgy_Kód);
 
 ALTER TABLE Előfeltétel
   ADD CONSTRAINT FK_Előfeltétel_Előfeltétel_ID
   FOREIGN KEY (Előfeltétel_ID)
-  REFERENCES Kurzus(Kurzus_ID);
+  REFERENCES Tárgy(Tárgy_Kód);

@@ -1,14 +1,14 @@
 -- Create the Kurzus table
 CREATE TABLE Kurzus (
-  Kurzus_ID TINYINT UNSIGNED PRIMARY KEY,
+  Kurzus_ID TINYINT(5) UNSIGNED PRIMARY KEY,
   Név VARCHAR(100),
   Kredit TINYINT
 );
 
 -- Create the Előfeltétel table
 CREATE TABLE Előfeltétel (
-  Kurzus_ID TINYINT UNSIGNED,
-  Előfeltétel_ID TINYINT UNSIGNED,
+  Kurzus_ID TINYINT(5) UNSIGNED,
+  Előfeltétel_ID TINYINT(5) UNSIGNED,
   PRIMARY KEY (Kurzus_ID, Előfeltétel_ID)
 );
 
@@ -23,7 +23,7 @@ CREATE TABLE Hallgató (
 -- Create the Teljesített_Tárgy table
 CREATE TABLE Teljesített_Tárgy (
   Neptun_Kód CHAR(6),
-  Kurzus_ID TINYINT UNSIGNED,
+  Kurzus_ID TINYINT(5) UNSIGNED,
   PRIMARY KEY (Neptun_Kód, Kurzus_ID)
 );
 

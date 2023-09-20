@@ -2,7 +2,7 @@
 CREATE TABLE Kurzus (
   Kurzus_ID TINYINT(5) UNSIGNED PRIMARY KEY,
   Név VARCHAR(100),
-  Kredit TINYINT
+  Kredit TINYINT UNSIGNED
 );
 
 -- Create the Előfeltétel table

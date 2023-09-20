@@ -1,0 +1,21 @@
+INSERT INTO Tárgy (Tárgy_Kód, Név, Kredit, Ajánlott_Félév)
+VALUES
+    ('INBPM0105-21', 'Operációs rendszerek', 6, 1),
+    ('INBPM0103-17', 'Számítógépes matematika és vizualizáció', 6, 1),
+    ('INBPM0101-21', 'Az informatika logikai alapjai', 6, 1),
+    ('INBPM0104-21', 'Bevezetés a programozásba', 3, 1),
+    ('INBPM0102-17', 'Diszkrét matematika', 6, 1),
+    ('INBPM0211-21', 'Magas szintű programozási nyelvek 1', 6, 2),
+    ('INBPM0208-17', 'Adatbázisrendszerek', 3, 2),
+    ('INBPM0210-17', 'Hálózati architektúrák és protokollok', 6, 2),
+    ('INBPM0206-17', 'Adatszerkezetek és algoritmusok', 6, 2),
+    ('INBPM03013-17', 'Alkalmazott statisztika', 6, 3),
+    ('INBPM0315-21', 'Magas szintű programozási nyelvek 2', 6, 3),
+    ('INBPM0316-17', 'Web technológiák', 6, 3),
+    ('INBPM0314-21', 'Az informatika számítástudományi alapjai', 6, 3),
+    ('INBPM0419-17', 'Informatikai biztonság alapjai', 6, 4),
+    ('INBPM0418-21', 'A mesterséges inteligencia alapjai', 6, 4),
+    ('INBPM0522-21', 'Webfejlesztés', 6, 5),
+    ('INBPM0521-17', 'Szofverfejlesztési módszertanok', 3, 5),
+    ('INBPM0523-21', 'Szakdolgozat 1', 5, 5),
+    ('INBPM0623-21', 'Szakdolgozat 2', 15, 6);

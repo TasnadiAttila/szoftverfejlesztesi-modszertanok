@@ -44,6 +44,36 @@ Egy olyan webes felület, ahol egy hallgató bejelentkezés után könnyedén é
 - A rendszer vegye figyelembe a tantárgykövetelményeket, tehát ne lehessen teljesítettnek jelölni egy tárgyat amelynek előfeltétele még nem teljesült.
   
 ### **7. Irányított és szabad szöveges riportok szövege:**
-    
+
+#### 1. Milyen elvárásokat támaszt a projekt kapcsán?
+
+
+##### A projekt során az alábbi elvárásokat támasztjuk:
+
+- Egyszerű és könnyen navigálható webes felület létrehozása.
+- Az egyetemi tanulmányokkal kapcsolatos információk könnyű elérhetősége.
+- Csak a kötelező kurzusok megjelenítése táblázatos formában az átláthatóság és az egyértelműség érdekében.
+- Az oszlopok a féléveket képviseljék, a tárgyak pedig az ajánlott teljesítési félévük alapján kerüljenek csoportosításra.
+- Nyilak alkalmazása a tárgyak közötti előfeltételek jelzésére.
+- A kreditszámot is megjelenítjük minden tárgynál.
+- A cellák színezése segítségül szolgál a hallgatók számára, hogy könnyen felismerjék, mely tárgyakat teljesítették már, és melyek még várnak teljesítésre.
+- Az aktuális félév kiemelése az áttekinthetőség érdekében.
+- A weboldal reszponzív és esztétikus kinézettel rendelkezik, hogy a felhasználók különböző eszközökön is kényelmesen használhassák.
+
+#### 2. Hogyan képzeli el, hogy működjön a projekt?
+
+A projekt célja, hogy a hallgatók egyszerűen és gyorsan hozzáférhessenek az egyetemi tanulmányokkal kapcsolatos információkhoz, különösen a PTI BSc szakra vonatkozóan. A webes felületen a hallgatók láthatják a kötelező kurzusokat, rendezve a félévek szerint. A kurzusok közötti előfeltételeket nyilak jelzik, és minden kurzus mellett megjelenik a hozzá tartozó kreditszám is. A cellák színezése az átláthatóságot növeli, és az aktuális félévet kiemeli a felhasználók számára. A weboldal reszponzív, így bármilyen eszközön kényelmesen használható.
+
+#### 3. Mi a jelenlegi üzleti folyamata a projekttel kapcsolatban?
+
+Jelenleg a hallgatók a Neptun nevű webes platformot használják az egyetemi tanulmányaik nyomon követésére. A Neptun rendszer tartalmazza a tantárgyak, kreditszámok, ajánlott félévek és egyéb információk listázását. Az új projekt ezen folyamatokat fogja kiváltani és egy egyszerűbb, áttekinthetőbb felülettel helyettesíti.
+
+#### 4. Hogyan kapcsolódik a projekt az ön üzleti tevékenységéhez?
+
+A projekt a hallgatók és az egyetem közötti kommunikációt javítja. Az egyszerűbben elérhető információk segítenek a hallgatóknak jobban megtervezni tanulmányaikat és követni az előrehaladásukat. Ez növelheti az elégedettséget és a hallgatók sikerességét, amely hozzájárulhat az egyetem hírnevének és vonzerejének növekedéséhez.
+
+#### 5. Van-e további információ vagy specifikáció, amit fontosnak tart, hogy megosszon velünk a projekt kapcsán?
+
+Kérjük, osszon meg bármilyen további információt vagy specifikációt, amelyet fontosnak tart a projektünk tervezésében és fejlesztésében. Például, bármilyen speciális funkciók vagy követelmények, amelyekre kitérhet.
 ### **8. Fogalomszótár:**
 - lezárt - A tárgy nem felvehető, mert nem teljesültek az előfeltételek.

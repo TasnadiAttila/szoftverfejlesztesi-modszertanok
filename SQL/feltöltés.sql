@@ -8,7 +8,7 @@ VALUES
     ('INBPM0207-21', 'Kalkulus', 6, 2),
     ('INBPM0211-21', 'Magas szintű programozási nyelvek 1', 6, 2),
     ('INBPM0208-17', 'Adatbázisrendszerek', 3, 2),
-    ('INBPM0209-17','Adatbázisrendszerek labor',3,2),
+    ('INBPM0209-17', 'Adatbázisrendszerek labor',3,2),
     ('INBPM0210-17', 'Hálózati architektúrák és protokollok', 6, 2),
     ('INBPM0206-17', 'Adatszerkezetek és algoritmusok', 6, 2),
     ('INBPM03013-17', 'Alkalmazott statisztika', 6, 3),
@@ -23,4 +23,27 @@ VALUES
     ('INBPM0521-17', 'Szofverfejlesztési módszertanok', 3, 5),
     ('INBPM0523-21', 'Szakdolgozat 1', 5, 5),
     ('INBPM0623-21', 'Szakdolgozat 2', 15, 6);
+
+INSERT INTO Előfeltétel (Tárgy_Kód, Előfeltétel_ID)
+VALUES
+    ('INBPM03013-17', 'INBPM0207-21'), -- Alk.Stat. <- Kalkulus
+    ('INBPM0417-21', 'INBPM0102-17'), -- Alk.Mat. <- Diszkrét Mat.
+    ('INBPM0206-17', 'INBPM0102-17'), -- Adatszerk. <- Diszkrét Mat.
+    ('INBPM0206-17', 'INBPM0101-21'), -- Adatszerk. <- Logika
+    ('INBPM0314-21', 'INBPM0102-17'), -- ISZA <- Diszkrét Mat.
+    ('INBPM0209-17', 'INBPM0101-21'), -- Adatb.Lab. <- Logika
+    ('INBPM0419-17', 'INBPM0101-21'), -- IBIZA <- Logika
+    ('INBPM0419-17', 'INBPM0211-21'), -- IBIZA <- Prog. 1
+    ('INBPM0208-17', 'INBPM0101-21'), -- Adatb. <- Logika
+    ('INBPM0316-17', 'INBPM0104-21'), -- Webtech. <- Bev. Prog.
+    ('INBPM0418-21', 'INBPM0101-21'), -- Mest.Int. <- Logika
+    ('INBPM0418-21', 'INBPM0211-21'), -- Mest.Int. <- Prog. 1
+    ('INBPM0522-21', 'INBPM0316-17'), -- Webfejl. <- Webtech.
+    ('INBPM0522-21', 'INBPM0315-21'), -- Webfejl. <- Prog. 2
+    ('INBPM0211-21', 'INBPM0104-21'), -- Prog. 1 <-- Bev. Prog.
+    ('INBPM0210-17', 'INBPM0104-21'), -- Háló. <- Bev. Prog.
+    ('INBPM0210-17', 'INBPM0105-21'), -- Háló. <- OP. Rendszer
+    ('INBPM0315-21', 'INBPM0211-21'), -- Prog. 2 <- Prog. 1
+    ('INBPM0420-21', 'INBPM0315-21'), -- Szoftver. <- Prog. 2
+    ('INBPM0521-17', 'INBPM0211-21'); -- Szoft. Mód. <- Prog. 1
 

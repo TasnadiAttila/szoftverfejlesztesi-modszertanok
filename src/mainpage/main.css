@@ -1,38 +1,62 @@
 .container {
   margin-top: 3vw;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: fit-content;
+  flex-wrap: nowrap; /* Prevent wrapping of .table-container elements */
+  overflow-x: hidden; /* Add horizontal scroll for smaller screens if necessary */
+  min-width: fit-content; 
+  
 }
 
 .table-container {
   text-align: center;
-  flex: 1;  
-  margin: 0.2vw;
+  margin: 0.1vw;
   max-width: 15vw;
 }
 
 .felevTable {
   border-collapse: separate;
-  width: 15vw;
+  width: 13vw;
 }
 
 .felev {
   padding: 1vw;
   border-radius: 1vw;
-  background-color: #E7F9AD;
+  background-color: #9EBFD2;
   display: flex;
-  justify-content: center; /* Center the text horizontally */
-  align-items: center; /* Center the text vertically */
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
 }
 
 .felevTable td {
   padding-top: 1vw;
   padding-bottom: 1vw;
   border-radius: 1vw;
-  background-color: #E7F9AD;
+  background-color: #9EBFD2;
+  height: 5vw;
+  font-size: 1vw;
 }
-.deleted-row{
+
+.felevTable th{
+  height: 5vw;
+}
+.deleted-row {
   visibility: hidden;
+}
+
+.szamlalo{
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 3vw;
+  font-size: 1vw;
+}
+.col{
+  border-radius: 1vw;
+  background-color: #9EBFD2;
+  padding: 1.5vw;
+  margin: 1vw;
+}
+.main{
+  background-color: #424651;
 }

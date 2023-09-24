@@ -1,36 +1,50 @@
-CREATE TABLE `Teljesített Tárgy`(
-    `Neptun_Kód` CHAR(6) NOT NULL,
-    `Kurzus_ID` TINYINT NOT NULL
+-- Create the Tárgy table
+CREATE TABLE Tárgy (
+  Tárgy_Kód CHAR(16) PRIMARY KEY,
+  Név VARCHAR(100),
+  Kredit TINYINT UNSIGNED,
+  Ajánlott_Félév TINYINT UNSIGNED
 );
-ALTER TABLE
-    `Teljesített Tárgy` ADD PRIMARY KEY(`Neptun_Kód`);
-ALTER TABLE
-    `Teljesített Tárgy` ADD PRIMARY KEY(`Kurzus_ID`);
-CREATE TABLE `Kurzus`(
-    `Kurzus_ID` TINYINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `Név` VARCHAR(100) NOT NULL,
-    `Állapot` VARCHAR(10) NULL COMMENT 'Hallgatóként számolt a teljesített tárgyak és előfeltételek függvényében.',
-    `Kredit` TINYINT NOT NULL
+
+-- Create the Előfeltétel table
+CREATE TABLE Előfeltétel (
+  Tárgy_Kód CHAR(16),
+  Előfeltétel_ID CHAR(16),
+  PRIMARY KEY (Tárgy_Kód, Előfeltétel_ID)
 );
-CREATE TABLE `Előfeltétel`(
-    `Kurzus_ID` TINYINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `Előfeltétel_ID` TINYINT NOT NULL
+
+-- Create the Hallgató table
+CREATE TABLE Hallgató (
+  Neptun_kód CHAR(6) PRIMARY KEY,
+  Név VARCHAR(60),
+  Félév TINYINT UNSIGNED,
+  Jelszó_HASH CHAR(64)
 );
-ALTER TABLE
-    `Előfeltétel` ADD PRIMARY KEY(`Előfeltétel_ID`);
-CREATE TABLE `Hallgató`(
-    `Neptun_kód` CHAR(6) NOT NULL,
-    `Név` VARCHAR(60) NOT NULL,
-    `Félév` TINYINT NOT NULL,
-    `Jelszó_HASH` CHAR(64) NOT NULL
+
+-- Create the Teljesített_Tárgy table
+CREATE TABLE Teljesített_Tárgy (
+  Neptun_Kód CHAR(6),
+  Tárgy_Kód CHAR(16),
+  PRIMARY KEY (Neptun_Kód, Tárgy_Kód)
 );
-ALTER TABLE
-    `Hallgató` ADD PRIMARY KEY(`Neptun_kód`);
-ALTER TABLE
-    `Teljesített Tárgy` ADD CONSTRAINT `teljesített tárgy_kurzus_id_foreign` FOREIGN KEY(`Kurzus_ID`) REFERENCES `Kurzus`(`Kurzus_ID`);
-ALTER TABLE
-    `Előfeltétel` ADD CONSTRAINT `előfeltétel_előfeltétel_id_foreign` FOREIGN KEY(`Előfeltétel_ID`) REFERENCES `Kurzus`(`Kurzus_ID`);
-ALTER TABLE
-    `Előfeltétel` ADD CONSTRAINT `előfeltétel_kurzus_id_foreign` FOREIGN KEY(`Kurzus_ID`) REFERENCES `Kurzus`(`Kurzus_ID`);
-ALTER TABLE
-    `Teljesített Tárgy` ADD CONSTRAINT `teljesített tárgy_neptun_kód_foreign` FOREIGN KEY(`Neptun_Kód`) REFERENCES `Hallgató`(`Neptun_kód`);
+
+-- Define foreign keys using ALTER TABLE
+ALTER TABLE Teljesített_Tárgy
+  ADD CONSTRAINT FK_TeljesitettTargy_Neptun
+  FOREIGN KEY (Neptun_Kód)
+  REFERENCES Hallgató(Neptun_kód);
+
+ALTER TABLE Teljesített_Tárgy
+  ADD CONSTRAINT FK_TeljesitettTargy_Tárgy
+  FOREIGN KEY (Tárgy_Kód)
+  REFERENCES Tárgy(Tárgy_Kód);
+
+ALTER TABLE Előfeltétel
+  ADD CONSTRAINT FK_Előfeltétel_Tárgy_Kód
+  FOREIGN KEY (Tárgy_Kód)
+  REFERENCES Tárgy(Tárgy_Kód);
+
+ALTER TABLE Előfeltétel
+  ADD CONSTRAINT FK_Előfeltétel_Előfeltétel_ID
+  FOREIGN KEY (Előfeltétel_ID)
+  REFERENCES Tárgy(Tárgy_Kód);

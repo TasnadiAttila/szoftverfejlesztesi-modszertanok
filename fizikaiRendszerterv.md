@@ -25,17 +25,48 @@
     - Előfeltétel:
         - ***Kurzus_ID** tinyint*: A kurzus azonosítója amelyhez előfeltételként szolgál
         - ***Előfeltétel_ID** tinyint*: Az előfeltétel kuruz azonosítója
+     
+				@startuml
+				entity "Hallgató" as h {
+				* neptun kód : char(6) <<PK>>
+				 --
+				 nev : varchar(60)
+				 felev : tinyint
+				 jelszo_hash : char(60)
+				}
+				entity "Teljesített Tárgy" as tt {
+				 * neptunk kód : char(6) <<FK>>
+				 * kurzus_id : tinyint <<PK>>
+				}
+				entity "Kurzus" as k {
+				 * kurzus_ID : tinyint <<PK>>
+				 nev : varchar(100)
+				 allapot : varchar(10)
+				 kredit : tinyint
+				}
+				entity "Előfeltétel" as e {
+				 * kurzus_id : tinyint <<PK>>
+				 * elofeltetel_id : tinyint <<FK>>
+				}
+				h --{ tt : nptun kód
+				tt }-- k : kurzus_id
+				k --{ e : kurzus_id
+				k --{ e : elofeltetel_id
+				@enduml
+
+![kép](https://github.com/TasnadiAttila/szoftverfejlesztesi-modszertanok/assets/70896019/b40d6a0f-3e9c-43f1-8e60-729fd1c78200)
+
 - ### **Teszttervek:**
-    - Teszttervek: Teszt készítése a felhasználói regisztrációhoz, bejelentkezéshez, kurzusok felvételéhez, és az előfeltételek 
+    - Teszttervek: Teszt készítése a felhasználói regisztrációhoz, bejelentkezéshez, kurzusok felvételéhez, és az előfeltételek ellenőrzéséhez.
 - ### **Telepítési terv:**
-    - A háttérben MySQL alapú adatbázis, míg a felhasználói felületen HTML5, CSS3, és JavaScript használata.
+    - A háttérben MySQL alapú adatbázis, míg a felhasználói felületen HTML5, CSS3, PHP használata.
 - ### **Rendszerspecifikációk:**
-    - Legalább 8.2.4 XAMPP használta, a lehető legfrissebb HTML, CSS, és JavaScript verziókkal
+    - Legalább 8.2.4 XAMPP használta, a lehető legfrissebb HTML, CSS, PHP verziókkal.
 - ### **Szoftverarchitektúra:**
 - #### 1. Felhasználói interfész:
 	A felhasználói interfész felelős az interakcióért a hallgatókkal. Ez magában foglalja azokat a részeket, amelyeken a hallgatók láthatják a kurzusokat, a táblázatos felületet, az előrehaladásukat és a bejelentkezést.
 		- **Főoldal:** A hallgatók itt láthatják a kötelező kurzusokat tartalmazó táblázatot. Az aktuális félév ki van emelve, és a kurzusok színezettek az előrehaladás alapján.
-		-   **Bejelentkezés:** A hallgatók bejelentkezhetnek a rendszerbe, hogy hozzáférjenek az adataikhoz és az előrehaladási információkhoz.
+		- **Bejelentkezés:** A hallgatók bejelentkezhetnek a rendszerbe, hogy hozzáférjenek az adataikhoz és az előrehaladási információkhoz.
 
 	- #### 2. Üzleti logika:
 		Az üzleti logika felelős a felhasználói kérelmek feldolgozásáért és az adatok kezeléséért. Itt találhatók azok a komponensek és szolgáltatások, amelyek segítenek a felhasználói igények kielégítésében.
@@ -44,21 +75,21 @@
 			-   **Kurzusok kezelése:** Ez a komponens felelős a kurzusok adatainak karbantartásáért, beleértve a kurzusok létrehozását, módosítását és törlését.
 			-   **Kurzusfelvételek kezelése:** Itt dolgozzák fel a kurzusok felvételét és teljesítését, valamint az előfeltételek ellenőrzését.
 	- #### 3. Adatbázis:
-	Az adatbázis tárolja az összes szükséges adatot a rendszer működéséhez, beleértve a kurzusokat, hallgatókat, kurzusfelvételeket és előrehaladási adatokat.
+	Az összes szükséges adat tárolása a rendszer működéséhez, beleértve a kurzusokat, hallgatókat, kurzusfelvételeket és előrehaladási adatokat amelyet relációs adatbázis segítségével tárolunk el. A weboldal és adatbázis összeköttetése PHP nyelv segítségével valósul meg.
 	- #### 4. Webes szerver:
-	A webes szerver felelős a kliens böngészőkből érkező HTTP kérések fogadásáért és válaszok küldéséért. A kérések feldolgozását az üzleti logika végzi, és a válaszokat a felhasználói interfésznek küldi.
+	A webes szerver felelős a kliens böngészőkből érkező HTTP kérések fogadásáért és válaszok küldéséért. A kérések feldolgozását az üzleti logika végzi, és a válaszokat a felhasználói interfésznek küldi. A webszervert szerepét shrek fogja ellátni.
 	- #### 5. Adatmegjelenítés:
 	Az adatok megjelenítése a felhasználói interfészen keresztül történik. A táblázatok és az előrehaladási információk vizualizálása, valamint a színezés és a kiemelés itt valósul meg.
 	- #### 6. Felhasználói autentikáció és hitelesítés:
 	Ez a komponens felelős a felhasználók bejelentkezésének kezeléséért, valamint az őket megfelelő jogosultságokkal ellátott területekhez való hozzáférés biztosításáért.
 	- #### 7. Adatbiztonság:
-	Az adatbiztonság komponens gondoskodik a felhasználói adatok védelméről és az adatb
+	Az adatbiztonság komponens gondoskodik a felhasználói adatok védelméről és az adatbázis titkosításáról.
 - ### **Az alkalmazás rétegei:**
     Különválaszthatók a modell, a nézet és a vezérlő rétegek.
 - ### **Adatspecifikációk/objektumspecifikációk (környezetfüggő adattervek):**
 	- #### 1. Adatspecifikációk
 		- Felhasználói adatok:
-			- Felhasználónév: A felhasználó bejelentkezési neve. 
+			- Neptun kód: A felhasználó jelvasza mellé társíott bejelentkezési kritérium. 
 			- Jelszó: A felhasználó bejelentkezési jelszava.
 		- Tanulmányi adatok:
 			- Kurzus: Az egyetemi kurzus neve.
@@ -67,27 +98,47 @@
 			- Félév: A kurzushoz tartozó ajánlott félév, amikor a tanulóknak érdemes elvégezni a kurzust.
 		- Tanulmányi előrehaladás
 			- Hallgató: Az egyetemi hallgatók adatai, beleértve a nevet, azonosítót és befejezett kurzusok listáját.
-			- Kurzusfelvétel: Rögzíti, hogy egy hallgató felvett-e egy kurzust, és ha igen, akkor mely félévben.
+			- Kurzusfelvétel: A hallgató magának jelöli be kattintással, a kurzus állapotát a feltételektől függően. 
 	- #### 2. Objektumspecifikációk
 		- Felhasználó (User)
 			-   Attribútumok:
-			    -   Felhasználónév
+			    -   Neptun Kód
 			    -   Jelszó
-			- Kurzus
-				-   Attribútumok:
-				    -   Kurzus neve
-				    -   Kreditszám
-				    -   Előfeltételek: Lista a kurzus előfeltételeiről
-				    -   Ajánlott félév
-			- Hallgató
-				-   Attribútumok:
-				    -   Azonosító
-				    -   Név
-				    -   Felvett kurzusok: A kurzusok listája, amelyeket a hallgató felvett a megfelelő félévben.
-			- Metódusok:
-			    -   `kurzusFel(kurzus)`: A kurzus felvétele a hallgató kurzuslistájába a megfelelő félévben.
-			    -   `teljesítettKurzus(kurzus)`: A kurzus teljesítésének rögzítése a hallgató kurzuslistájában.
-			    -   `megjelenitElofeltetelek(kurzus)`: Megjeleníti, hogy a kurzus előfeltételei teljesültek-e.
+		- Kurzus
+			-   Attribútumok:
+			    -   Kurzus neve
+			    -   Kreditszám
+			    -   Előfeltételek: Lista a kurzus előfeltételeiről
+			    -   Ajánlott félév
+		- Hallgató
+			-   Attribútumok:
+			    -   Azonosító
+			    -   Név
+			    -   Felvett kurzusok: A kurzusok listája, amelyeket a hallgató felvett a megfelelő félévben.
+		- Metódusok:
+		    -   `teljesítettKurzus(kurzus)`: A kurzus teljesítésének rögzítése a hallgató kurzuslistájában.
+		    -   `megjelenitElofeltetelek(kurzus)`: Megjeleníti, hogy a kurzus előfeltételei teljesültek-e.
+  
+				  	@startuml
+					class User {
+					  - Neptun Kód
+					  - Jelszó
+					}
+					class Kurzus {
+					  - Kurzus neve
+					  - Kreditszám
+					  - Előfeltételek: Lista a kurzus előfeltételeiről
+					  - Ajánlott félév
+					}
+					class Hallgató {
+					  - Azonosító
+					  - Név
+					  - Felvett kurzusok: List<Kurzus>
+					}
+					@enduml
+
+![image](https://github.com/TasnadiAttila/szoftverfejlesztesi-modszertanok/assets/70896019/15692d82-12e7-4f1d-9e6e-4eabd2043181)
+
 - ### **Programspecifikációk:**
 - #####  1. Bevezetés
     A PTI BSc Tanulmányi Követési Webes Felület egy olyan alkalmazás, amely lehetővé teszi a PTI egyetemi hallgatók számára, hogy könnyedén és egy helyen kövessék tanulmányaik előrehaladását.
@@ -112,10 +163,10 @@
    - 2.5. Szerzett kreditszám
         Az oldalon jól látható helyen megjelenik a szerzett kreditszám Szerzett/Összes alakban.
    - 2.6. Félév váltása
-        A felhasználók váltogathatnak a félévek között egy gombokkal vagy lenyíló menüvel.
+        A felhasználók váltogathatnak a félévek között egy gombbal vagy lenyíló menüvel.
    #### 3. Rendszerkövetelmények
    - 3.1. Technológiai követelmények
-        Az alkalmazás webes alapokon működik, és támogatja a böngészők legújabb verzióit
+        Az alkalmazás webes alapokon működik, és támogatja az ismertebb böngészők legújabb verzióit. Chrome és Firefox alapokon garantált működéssel.
    - 3.2. Adatbázis
         Az alkalmazás adatbázist használ a felhasználói adatok és kurzusinformációk tárolására.
    #### 4. Fejlesztői megjegyzések
@@ -123,5 +174,5 @@
         Az alkalmazás MVC (Model-View-Controller) architektúrára épül, ahol a modellek a kurzusok és a felhasználók,
         a nézet a webes felület, a vezérlők pedig az alkalmazás logikáját kezelik.
    - 4.2. Fejlesztési nyelv és keretrendszer
-        Az alkalmazás HTML,CSS,JavaScript nyelven készül MySQL keretrendszer felhasználásával.
+        Az alkalmazás HTML,CSS,PHP nyelven készül MySQL keretrendszer felhasználásával.
 

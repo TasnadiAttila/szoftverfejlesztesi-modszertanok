@@ -62,14 +62,14 @@ if ($result->num_rows > 0) {
 
 function createCard($kod, $nev, $kredit){
     global $feltetelek;
-    echo "<tr><td id=\"" . $kod . "\" class=\"card\" 
+    echo "<tr><td id=\"" . $kod . "\"
     elofeltetelek=\"";
     foreach($feltetelek as $feltetel){
     if($feltetel["Tárgy_Kód"] == $kod){
         echo $feltetel["Előfeltétel_ID"] . ";";
     }
     }   
-    echo"\"> Tárgy_Kód: " . $kod . " - Név: " . $nev . " - Kredit: " . $kredit . "</td></tr>"; 
+    echo"\">" . $nev . "<br> Tárgy_Kód: " . $kod . "<br> Kredit: " . $kredit . "</td></tr>"; 
 }
 
 // Close the database connection

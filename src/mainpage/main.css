@@ -7,13 +7,10 @@
   
 }
 
-.table-container {
+.felevTable {
   text-align: center;
   margin: 0.1vw;
   max-width: 15vw;
-}
-
-.felevTable {
   border-collapse: separate;
   width: 13vw;
 }
@@ -57,14 +54,14 @@
 @media (max-width: 576px) {
   .container {
     white-space: nowrap;
-    overflow-x: auto;
+    overflow-x: scroll;
     display: flex;
     align-items: flex-start; /* Align items to the top */
     justify-content: flex-start;
     position: relative;
   }
 
-  .table-container {
+  .felevTable {
     flex: 1 0 auto;
     min-width: 90vw; /* Set a fixed width and adjust as needed */
     margin: 0 2vw; /* Add a fixed margin between tables */
@@ -73,10 +70,7 @@
     align-items: center;
     width: fit-content;
     overflow: visible;
-  }
-
-  .felevTable {
-    width: 100%;
+    display: table;
   }
 
   .felev {
@@ -85,12 +79,14 @@
   }
 
   .felevTable th {
-    height: 25vw;
+    height: 22vw;
+    border: 5px red solid;
   }
 
   .felevTable td {
     font-size: 3.5vw;
     height: 20vw;
+    text-align: center;
   }
 
   .sliding-footer {

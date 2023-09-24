@@ -33,8 +33,8 @@
   padding-bottom: 1vw;
   border-radius: 1vw;
   background-color: #9EBFD2;
-  height: 5vw;
-  font-size: 1vw;
+  height: 6vw;
+  font-size: .9vw;
 }
 
 .felevTable th{
@@ -44,19 +44,66 @@
   visibility: hidden;
 }
 
-.szamlalo{
-  width: 80%;
-  text-align: center;
-  margin: 0 auto;
-  margin-top: 3vw;
-  font-size: 1vw;
-}
-.col{
-  border-radius: 1vw;
-  background-color: #9EBFD2;
-  padding: 1.5vw;
-  margin: 1vw;
-}
 .main{
   background-color: #424651;
+}
+.felevTable .kredit{
+  background-color: #BCE7FD;
+}
+
+
+
+/* Media Query for xs screens (phones) */
+@media (max-width: 576px) {
+  .container {
+    white-space: nowrap;
+    overflow-x: auto;
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    justify-content: flex-start;
+    position: relative;
+  }
+
+  .table-container {
+    flex: 1 0 auto;
+    min-width: 90vw; /* Set a fixed width and adjust as needed */
+    margin: 0 2vw; /* Add a fixed margin between tables */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    overflow: visible;
+  }
+
+  .felevTable {
+    width: 100%;
+  }
+
+  .felev {
+    font-size: 7vw;
+    height: 3vw;
+  }
+
+  .felevTable th {
+    height: 25vw;
+  }
+
+  .felevTable td {
+    font-size: 3.5vw;
+    height: 20vw;
+  }
+
+  .sliding-footer {
+    position: fixed;
+    bottom: 0; /* Set to 0 to keep the footer at the bottom of the viewport */
+    left: 0;
+    width: 100%;
+    background-color: #695e5b;
+    color: white;
+    text-align: center;
+    transition: bottom 0.3s;
+    border-radius: 2vw;
+    font-size: 5vw;
+    font-weight: bold;
+  }
 }

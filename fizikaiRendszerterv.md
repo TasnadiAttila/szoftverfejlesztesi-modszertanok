@@ -45,8 +45,8 @@
 				 kredit : tinyint
 				}
 				entity "Előfeltétel" as e {
-				 * kurzus_id : tinyint <<PK>>
-				 * elofeltetel_id : tinyint <<FK>>
+				 * kurzus_id : tinyint <<PK>> <<FK>>
+				 * elofeltetel_id : tinyint <<PK>> <<FK>>
 				}
 				h --{ tt : nptun kód
 				tt }-- k : kurzus_id
@@ -54,7 +54,7 @@
 				k --{ e : elofeltetel_id
 				@enduml
 
-![kép](https://github.com/TasnadiAttila/szoftverfejlesztesi-modszertanok/assets/70896019/b40d6a0f-3e9c-43f1-8e60-729fd1c78200)
+![image](https://github.com/TasnadiAttila/szoftverfejlesztesi-modszertanok/assets/90500798/52c7d2a7-8bea-4318-b1e0-a8a27f814e40)
 
 - ### **Teszttervek:**
     - Teszttervek: Teszt készítése a felhasználói regisztrációhoz, bejelentkezéshez, kurzusok felvételéhez, és az előfeltételek ellenőrzéséhez.
